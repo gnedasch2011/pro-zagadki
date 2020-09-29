@@ -20,11 +20,15 @@ return [
             'class' => 'yii\debug\Module',
             'allowedIPs' => ['127.0.0.1']
         ],
+
+        'zagadki' => [
+            'class' => 'frontend\modules\zagadki\Module',
+        ],
     ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
-              'enableCsrfValidation' => false,
+            'enableCsrfValidation' => false,
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -52,9 +56,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-//                'rhyme/index' => 'rhyme/index',
-//                'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
-//                '' => 'rhyme/index',
+                    '' => 'zagadki/default/main-page',
 //                'names' => 'rhyme/page-with-name',
 //                'sitemap.xml' => 'sitemap/default',
 //                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
@@ -63,6 +65,8 @@ return [
 //                [
 //                    'class' => 'frontend\modules\url\components\rule\UrlRule',
 //                ],
+//                'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
+//                'rhyme/index' => 'rhyme/index',
             ],
         ],
 

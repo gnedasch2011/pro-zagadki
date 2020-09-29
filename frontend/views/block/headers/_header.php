@@ -1,4 +1,5 @@
 <?php
+
 use frontend\modules\search\form\SearchQuery;
 use yii\helpers\Html;
 
@@ -23,11 +24,21 @@ $SearchQuery = new SearchQuery();
             </a>
         </div>
 
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Загадки по категориям
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                </ul>
+            </li>
+        </ul>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class=""><a href="#">Поиск синонимов <span class="sr-only">(current)</span></a>
-                </li>
+
+
             </ul>
 
             <?php
