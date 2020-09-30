@@ -45,10 +45,42 @@ AppAsset::register($this);
             ]);
             ?>
         </div>
+
+
         <?= $content ?>
+
+        <!--        ///Правый блок рекламы-->
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+            <?php
+            echo \yii\widgets\Menu::widget([
+                'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
+                'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
+                'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
+                'options' => ['class' => 'nav'],
+            ]);
+            ?>
+        </div>
     </div>
 </div>
 <?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>
+
+<style>
+
+    #my_nav {
+        background: #DBE8BA;
+        border-radius: 6px;
+        padding: 5px 15px;
+    }
+
+    #my_nav .nav-divider {
+        background-color: #000;
+    }
+
+    #my_nav a {
+        color: #204460;
+    }
+</style>

@@ -1,9 +1,7 @@
 <?php
 
-namespace frontend\modules\zagadki\controllers;
+namespace frontend\modules\blank_module\controllers;
 
-use frontend\modules\category\model\CategoryBase;
-use frontend\modules\menu\model\MenuHelper;
 use frontend\modules\page\model\Page;
 use frontend\modules\url\components\ControllerWithParam;
 use Yii;
@@ -30,6 +28,7 @@ class DefaultController extends ControllerWithParam
 
     public function actionMainPage()
     {
+
 
         return $this->render('MainPage', [
         ]);
