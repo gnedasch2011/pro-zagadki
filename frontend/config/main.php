@@ -56,7 +56,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                    '' => 'zagadki/default/main-page',
+                '' => 'zagadki/default/main-page',
+                '<category:[\w-]+>' => 'zagadki/default/list',
 //                'names' => 'rhyme/page-with-name',
 //                'sitemap.xml' => 'sitemap/default',
 //                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
