@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\blank_module\controllers;
+namespace app\modules\article\controllers;
 
 use frontend\modules\page\model\Page;
 use frontend\modules\url\components\ControllerWithParam;
@@ -22,13 +22,6 @@ class DefaultController extends ControllerWithParam
 
         return $this->render('view', [
             'page' => $page,
-        ]);
-    }
-
-
-    public function actionMainPage()
-    {
-        return $this->render('MainPage', [
         ]);
     }
 

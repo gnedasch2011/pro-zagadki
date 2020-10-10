@@ -1,25 +1,25 @@
 <?php
 
-namespace frontend\modules\zagadki\model;
+namespace frontend\modules\items\model;
 
 use Yii;
 
 /**
- * This is the model class for table "puzzles".
+ * This is the model class for table "items".
  *
  * @property int $id  [id] => 1\n    [qustion] => Ждали маму с молоком,<br>А пустили волка в дом…<br>Кем же были эти<br>Маленькие дети?\n    [answer] => Семеро козлят\n    [cat_ids] => 1305,669\n    [img] => 
  * @property string $qustion
  * @property string $img
  * @property string $answer
  */
-class Puzzles extends \yii\db\ActiveRecord
+class Items extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'puzzles';
+        return 'items';
     }
 
     /**

@@ -24,6 +24,9 @@ return [
         'zagadki' => [
             'class' => 'frontend\modules\zagadki\Module',
         ],
+        'site' => [
+            'class' => 'frontend\modules\site\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -56,8 +59,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'zagadki/default/main-page',
-                '<category:[\w-]+>' => 'zagadki/default/list',
+                '' => 'site/default/main-page',
+                '<category:[\w-]+>' => 'category/default/list',
 //                'names' => 'rhyme/page-with-name',
 //                'sitemap.xml' => 'sitemap/default',
 //                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',

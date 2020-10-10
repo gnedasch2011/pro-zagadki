@@ -8,7 +8,13 @@
 
 namespace frontend\modules\category\model;
 
-class Category extends \yii\base\Model
-{
+use frontend\modules\items\model\Items;
 
+class Category extends CategoryBase
+{
+    public function getItems()
+    {
+        return $this->hasMany(Items::className(), ['id' => 'item_id'])
+            ->viaTable('items_categorys', ['category_id' => 'id']);
+    }
 }
