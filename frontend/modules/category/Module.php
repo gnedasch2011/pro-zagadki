@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\blank_module;
+namespace frontend\modules\category;
 
 /**
  * tests module definition class
@@ -10,7 +10,7 @@ class Module extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\blank_module\controllers';
+    public $controllerNamespace = 'frontend\modules\category\controllers';
 
 
     /**

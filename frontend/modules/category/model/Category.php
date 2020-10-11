@@ -17,4 +17,13 @@ class Category extends CategoryBase
         return $this->hasMany(Items::className(), ['id' => 'item_id'])
             ->viaTable('items_categorys', ['category_id' => 'id']);
     }
+
+    public function getSubCat()
+    {
+        $res = [];
+
+        $res = self::find()->where(['parent_id' => $this->id])->all();
+
+        return $res;
+    }
 }

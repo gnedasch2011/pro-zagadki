@@ -9,6 +9,11 @@ namespace frontend\modules\url\components;
  */
 class ControllerWithParam extends \yii\web\Controller
 {
+
+    /**
+     * @inheritdoc
+     */
+
     /**
      * Устанавливает параметры страница
      * мета теги и переменную isLanding

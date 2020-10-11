@@ -44,12 +44,5 @@ class CategoryBase extends \yii\db\ActiveRecord
         ];
     }
 
-    public function getSubCat()
-    {
-        $res = [];
 
-        $res = self::find()->where(['parent_id' => $this->id])->all();
-
-        return $res;
-    }
 }

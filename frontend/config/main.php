@@ -1,4 +1,5 @@
 <?php
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -21,11 +22,11 @@ return [
             'allowedIPs' => ['127.0.0.1']
         ],
 
-        'zagadki' => [
-            'class' => 'frontend\modules\zagadki\Module',
-        ],
         'site' => [
             'class' => 'frontend\modules\site\Module',
+        ],
+        'category' => [
+            'class' => 'frontend\modules\category\Module',
         ],
     ],
     'components' => [
@@ -51,6 +52,20 @@ return [
                 ],
             ],
         ],
+
+        'view' => [
+//            'class' => 'app\modules\common\components\View',
+            'theme' => [
+                'basePath' => '@app/themes/default',
+                'baseUrl' => '@web/themes/default',
+                'pathMap' => [
+                    '@app/views' => '@app/themes/default',
+                    '@app/modules' => '@app/themes/default/modules',
+
+                ]
+            ]
+        ],
+
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
@@ -60,7 +75,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/default/main-page',
-                '<category:[\w-]+>' => 'category/default/list',
+                '<name_transliteration:[\w-]+>' => 'category/default/list',
 //                'names' => 'rhyme/page-with-name',
 //                'sitemap.xml' => 'sitemap/default',
 //                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',

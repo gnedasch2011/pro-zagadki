@@ -12,7 +12,6 @@ class DefaultController extends ControllerWithParam
 {
     public function actionMainPage()
     {
-
         return $this->render('MainPage', [
         ]);
     }

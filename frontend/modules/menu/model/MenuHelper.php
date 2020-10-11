@@ -17,13 +17,12 @@ class MenuHelper extends Model
     public static function getItemsForMenu()
     {
 
-        $categorys = CategoryBase::find()->where([
+        $categorys = Category::find()->where([
             'parent_id' => 0,
         ])->all();
 
 
         $templateSubCat = '<a href="{url}" class="dropdown-toggle" data-toggle="dropdown">{label}<span class="caret"></span></a>';
-
 
         foreach ($categorys as $category) {
 
@@ -34,8 +33,8 @@ class MenuHelper extends Model
             if ($category->subCat) {
                 foreach ($category->subCat as $subCat) {
                     $subCats[] = [
-                        'label' => $subCat->name,
-                        'url' => 'url/' . $subCat->name,
+                        'label' => $subCat->name_transliteration,
+                        'url' => $subCat->name_transliteration,
                     ];
                 }
 
