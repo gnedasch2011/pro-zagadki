@@ -1,5 +1,5 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-puzzles <?= $colorBlock; ?>">
-    <h4><a href="">Загадка на тему <?= $category->name; ?> - id (<?= $model->id; ?>)</a></h4>
+    <h4><a href="<?= $model->detailUrl; ?>">Загадка на тему <?= $category->name; ?> - id (<?= $model->id; ?>)</a></h4>
     <p><?= $model->qustion; ?></p>
 
 

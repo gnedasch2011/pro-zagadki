@@ -51,8 +51,23 @@ class Items extends \yii\db\ActiveRecord
     {
 
         return $this->hasMany(Category::className(), ['id' => 'category_id'])
-            ->viaTable('items_categorys', ['item_id' => 'id']);;
+            ->viaTable('items_categorys', ['item_id' => 'id']);
     }
 
+    public function getCategory()
+    {
+        return $this->hasOne(Category::className(), ['id' => 'category_id'])
+            ->viaTable('items_categorys', ['item_id' => 'id']);
+    }
+
+
+    public function getDetailUrl()
+    {
+        $detailUrl = '';
+        $category = $this->category;
+        $detailUrl = $category->name_transliteration . '/' . $this->id;
+
+        return $detailUrl;
+    }
 
 }
