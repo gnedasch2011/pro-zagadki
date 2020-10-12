@@ -2,12 +2,13 @@
 
 namespace frontend\modules\items\model;
 
+use frontend\modules\category\model\Category;
 use Yii;
 
 /**
  * This is the model class for table "items".
  *
- * @property int $id  [id] => 1\n    [qustion] => Ждали маму с молоком,<br>А пустили волка в дом…<br>Кем же были эти<br>Маленькие дети?\n    [answer] => Семеро козлят\n    [cat_ids] => 1305,669\n    [img] => 
+ * @property int $id  [id] => 1\n    [qustion] => Ждали маму с молоком,<br>А пустили волка в дом…<br>Кем же были эти<br>Маленькие дети?\n    [answer] => Семеро козлят\n    [cat_ids] => 1305,669\n    [img] =>
  * @property string $qustion
  * @property string $img
  * @property string $answer
@@ -45,4 +46,13 @@ class Items extends \yii\db\ActiveRecord
             'answer' => 'Answer',
         ];
     }
+
+    public function getCategories()
+    {
+
+        return $this->hasMany(Category::className(), ['id' => 'category_id'])
+            ->viaTable('items_categorys', ['item_id' => 'id']);;
+    }
+
+
 }

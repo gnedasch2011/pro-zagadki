@@ -26,4 +26,9 @@ class Category extends CategoryBase
 
         return $res;
     }
+
+    public function getUrl()
+    {
+        return $this->name_transliteration;
+    }
 }

@@ -52,6 +52,7 @@ class DefaultController extends ControllerWithParam
         return $this->render('list', [
             'models' => $models,
             'pages' => $pages,
+            'category' => $category,
         ]);
     }
 

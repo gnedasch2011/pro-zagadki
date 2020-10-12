@@ -40,3 +40,33 @@ h1{
 .buttonCenter {
     margin-bottom: 10px;
 }
+
+.cont_tags a{
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 3px 10px;
+    margin-bottom: 5px;
+}
+.glyphicon-tag::before {
+    content: "\e041";
+}
+.cont_tags .glyphicon {
+    margin-right: 2px;
+    color: #847146;
+}
+
+.block-puzzles{
+    background-color: #ffe8dd;
+    margin-bottom: 20px;
+}
+
+.gr4{
+    background-color: #ffe8dd;
+}
+
+
+.gr5{
+    background-color: #fbf1ff;
+}
+
