@@ -31,6 +31,10 @@ return [
         'items' => [
             'class' => 'frontend\modules\items\Module',
         ],
+
+        'sitemap' => [
+            'class' => 'frontend\modules\sitemap\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -81,11 +85,11 @@ return [
                 '<name_transliteration:[\w-]+>/<id:\d+>' => 'items/default/detail',
                 '<name_transliteration:[\w-]+>' => 'category/default/list',
 
-
+                'sitemap.xml' => 'sitemap/default',
+                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
 
 //                'names' => 'rhyme/page-with-name',
-//                'sitemap.xml' => 'sitemap/default',
-//                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
+
 //                '<module:[\w-]+>/admin/<action:[\w-]+>/<id:\d+>' => '<module>/admin/<action>',
 //                '<module:[\w-]+>/admin/<action:[\w-]+>' => '<module>/admin/<action>',
 //                [

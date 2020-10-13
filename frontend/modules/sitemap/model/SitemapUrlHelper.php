@@ -9,6 +9,8 @@
 namespace frontend\modules\sitemap\model;
 
 
+use frontend\modules\category\model\Category;
+use frontend\modules\items\model\Items;
 use yii\base\Model;
 
 class SitemapUrlHelper extends Model
@@ -19,13 +21,30 @@ class SitemapUrlHelper extends Model
 
     public static function getAllUrls()
     {
-
         if (!$res = \Yii::$app->cache->get('allUrls')) {
             $res = [];
+            $urlsPuzzles = Items::find()
+                ->all();
+
+            foreach ($urlsPuzzles as $urlsPuzzle) {
+                $urls[] = $urlsPuzzle->getDetailUrl();
+            }
+
+            $urlsCategorys = Category::find()
+                ->all();
+
+            $urlsCategoryArr = [];
+
+            foreach ($urlsCategorys as $urlsCategory) {
+                $urlsCategoryArr[] = '/' . $urlsCategory->getUrl();
+            }
+
+            $res = array_merge($urls, $urlsCategoryArr);
 
 
             \Yii::$app->cache->set('allUrls', $res, 3600 * 6);
         }
+
 
         return $res;
     }
