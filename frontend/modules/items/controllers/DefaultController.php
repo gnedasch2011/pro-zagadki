@@ -1,7 +1,8 @@
 <?php
 
-namespace app\modules\article\controllers;
+namespace app\modules\items\controllers;
 
+use frontend\modules\items\model\Items;
 use frontend\modules\page\model\Page;
 use frontend\modules\url\components\ControllerWithParam;
 use Yii;
@@ -25,6 +26,13 @@ class DefaultController extends ControllerWithParam
         ]);
     }
 
+    public function actionDetail($name_transliteration, $id)
+    {
+        $model = Items::findOne(['id' => $id]);
 
+        return $this->render('view', [
+            'model' => $model,
+        ]);
+    }
 }
 

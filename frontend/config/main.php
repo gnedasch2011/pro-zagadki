@@ -28,6 +28,9 @@ return [
         'category' => [
             'class' => 'frontend\modules\category\Module',
         ],
+        'items' => [
+            'class' => 'frontend\modules\items\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -75,7 +78,11 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/default/main-page',
+                '<name_transliteration:[\w-]+>/<id:\d+>' => 'items/default/detail',
                 '<name_transliteration:[\w-]+>' => 'category/default/list',
+
+
+
 //                'names' => 'rhyme/page-with-name',
 //                'sitemap.xml' => 'sitemap/default',
 //                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
