@@ -34,7 +34,7 @@ class MenuHelper extends Model
                 foreach ($category->subCat as $subCat) {
                     $subCats[] = [
                         'label' => $subCat->name,
-                        'url' => $subCat->name_transliteration,
+                        'url' => '/' . $subCat->name_transliteration,
                     ];
                 }
 

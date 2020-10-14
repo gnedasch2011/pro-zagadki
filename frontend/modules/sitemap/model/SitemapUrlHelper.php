@@ -21,26 +21,35 @@ class SitemapUrlHelper extends Model
 
     public static function getAllUrls()
     {
+        $defaultURls = [
+            '/',
+        ];
+
         if (!$res = \Yii::$app->cache->get('allUrls')) {
+
             $res = [];
             $urlsPuzzles = Items::find()
+                ->with('category')
+                ->asArray()
                 ->all();
 
+
             foreach ($urlsPuzzles as $urlsPuzzle) {
-                $urls[] = $urlsPuzzle->getDetailUrl();
+
+                $urls[] = $urlsPuzzle['category']['name_transliteration'] . '/' . $urlsPuzzle['id'];
             }
 
             $urlsCategorys = Category::find()
+                ->asArray()
                 ->all();
 
             $urlsCategoryArr = [];
 
             foreach ($urlsCategorys as $urlsCategory) {
-                $urlsCategoryArr[] = '/' . $urlsCategory->getUrl();
+                $urlsCategoryArr[] = '/' . $urlsCategory['name_transliteration'];
             }
 
-            $res = array_merge($urls, $urlsCategoryArr);
-
+            $res = array_merge($defaultURls,$urlsCategoryArr, $urls);
 
             \Yii::$app->cache->set('allUrls', $res, 3600 * 6);
         }
