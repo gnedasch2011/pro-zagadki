@@ -36,7 +36,7 @@ class SitemapUrlHelper extends Model
 
             foreach ($urlsPuzzles as $urlsPuzzle) {
 
-                $urls[] = $urlsPuzzle['category']['name_transliteration'] . '/' . $urlsPuzzle['id'];
+                $urls[] = '/' . $urlsPuzzle['category']['name_transliteration'] . '/' . $urlsPuzzle['id'];
             }
 
             $urlsCategorys = Category::find()
