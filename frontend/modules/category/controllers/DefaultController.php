@@ -41,9 +41,14 @@ class DefaultController extends ControllerWithParam
 
         $query = $category->getItems();
 
+        $this->view->title = "Загадки про {$category->name} с ответами | 50 загадок на Pro-Zagadki.ru";
+        $this->view->registerMetaTag(
+            ['name' => 'description', 'content' => "Загадки про {$category->name}. Подборка из 50 загадок с ответами для детей и взрослых на Pro-Zagadki.ru"]
+        );
+
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count()]);
-     
+
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
