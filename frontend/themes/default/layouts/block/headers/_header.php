@@ -2,81 +2,130 @@
 
 use frontend\modules\search\form\SearchQuery;
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
 
 $SearchQuery = new SearchQuery();
 
 ?>
-
-<div class="container">
-    <nav class="navbar navbar-default">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img width="30" alt="Brand"
-                     src="https://vashservice.ua/image/image-remont-notebook-hp.jpg">
-            </a>
-        </div>
-
-        <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Загадки по категориям
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Ссылка</a></li>
-                    <li><a href="#">Ссылка</a></li>
-                </ul>
-            </li>
-        </ul>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-
-            </ul>
-
-            <?php
-
-            use yii\widgets\ActiveForm;
-
-            $form = ActiveForm::begin([
-                'action' => '/rhyme/index',
-                'options' => ['class' => 'navbar-form navbar-left'],
-            ]) ?>
-            <div class="form-group">
-                <?= $form->field($SearchQuery, 'query')
-                    ->textInput([
-                        'class' => 'form-control',
-                        'placeholder' => 'Поиск',
-                    ])->label('');
-                ?>
+<header>
+    <div class="top_line">
+        <div class="container">
+            <div class="row flex">
+                <div class="col-md-4">
+                    <div class="top_left">
+                        <div class="logo"><a href="#"><img src="/images/main/logo.svg" alt=""></a>
+                        </div>
+                        <span class="top_city"><?= $h1 ?? ''; ?></h1></span>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="top_right">
+                        <div class="">
+                            <form class="search_block" action="/search/index">
+                                <input type="search" placeholder="Поиск по сайту">
+                                <button class="btn_search">Найти</button>
+                            </form>
+                        </div>
+                        <div class="top_user">
+                            <button class="user_icon"></button>
+                        </div>
+                        <button class="toggle_btn"></button>
+                    </div>
+                </div>
             </div>
-            <?= Html::submitButton('Найти', ['class' => 'btn btn-default buttonCenter']) ?>
-            <?php ActiveForm::end() ?>
+        </div>
+    </div>
 
+    <div class="top_mnu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 flex">
+                    <div class="top_mnu_item">
+                        <h3>Готовые туры</h3>
+                        <ul>
+                            <li><a href="#">Где купить</a></li>
+                            <li><a href="#">Виды туров</a></li>
+                            <li><a href="#">Популярные страны</a></li>
+                            <li><a href="#">Туры по России</a></li>
+                            <li><a href="#">Круизы</a></li>
+                        </ul>
+                    </div>
+                    <div class="top_mnu_item">
+                        <h3>Едем сами</h3>
+                        <ul>
+                            <li><a href="#">Маршруты</a></li>
+                            <li><a href="#">Расписание Ж/Д</a></li>
+                            <li><a href="#">Аренда жилья</a></li>
+                            <li><a href="#">Визы. Посольства</a></li>
+                            <li><a href="#">Купить on-line</a></li>
+                        </ul>
+                    </div>
+                    <div class="top_mnu_item">
+                        <h3>Путеводитель</h3>
+                        <ul>
+                            <li><a href="#">Страны. Города и курорты</a></li>
+                            <li><a href="#">Достопримечательности</a></li>
+                            <li><a href="#">Отели</a></li>
+                            <li><a href="#">Отзывы об отелях</a></li>
+                            <li><a href="#">Вопросы</a></li>
+                        </ul>
+                    </div>
+                    <div class="top_mnu_item">
+                        <h3>Информация</h3>
+                        <ul>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Фоторепортажи</a></li>
+                            <li><a href="#">Погода</a></li>
+                            <li><a href="#">Справочник</a></li>
+                        </ul>
+                    </div>
+                    <div class="top_mnu_item">
+                        <h3>B2B</h3>
+                        <ul>
+                            <li><a href="#">Турбизнес</a></li>
+                            <li><a href="#">События</a></li>
+                            <li><a href="#">Турфирмы</a></li>
+                            <li><a href="#">Сайты</a></li>
+                            <li><a href="#">Календарь</a></li>
+                        </ul>
+                    </div>
 
-            <?php /*?>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                </div>
+            </div>
+            <div class="main-menu-top-l"></div>
+        </div>
+    </div>
+</header>
+<section class="baner_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="baner_img"><img src="/img/baner1.webp" alt=""></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="breadcrumbs_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumbs_block">
+                    <span>Путеводитель:</span>
+                    <ul>
+                        <li><a href="#">Страны </a></li>
+                        /
+                        <li><a href="#">Достопримечательности</a></li>
+                        /
+                        <li><a href="#">Отели</a></li>
+                        /
+                        <li><a href="#">Отзывы об отелях</a></li>
+                        /
+                        <li><a href="#">Вопросы</a></li>
                     </ul>
-                </li>
-            </ul>
-     <?php */ ?>
-        </div><!-- /.navbar-collapse -->
-    </nav>
-</div><!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
