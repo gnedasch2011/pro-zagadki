@@ -3,7 +3,7 @@
 use frontend\modules\search\form\SearchQuery;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use yii\widgets\Breadcrumbs;
 
 $SearchQuery = new SearchQuery();
 
@@ -129,3 +129,14 @@ $SearchQuery = new SearchQuery();
         </div>
     </div>
 </section>
+<?php
+// $this is the view object currently being used
+echo Breadcrumbs::widget([
+    'homeLink' => [
+        'label' => 'Рифмы к словам',
+        'url' => Yii::$app->homeUrl,
+        'title' => 'Рифмы к словам',
+    ],
+    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+]);
+?>

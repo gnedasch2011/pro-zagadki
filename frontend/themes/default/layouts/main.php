@@ -42,7 +42,7 @@ AppAsset::register($this);
                         <img src="img/baner2.png" alt="">
                         <div class="news_side">
                             <h3><a href="#">Категории</a></h3>
-                        <?php
+                            <?php
                             echo \yii\widgets\Menu::widget([
                                 'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
                                 'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
@@ -58,42 +58,6 @@ AppAsset::register($this);
             </div>
         </div>
     </section>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <?php
-                // $this is the view object currently being used
-                echo Breadcrumbs::widget([
-                    'homeLink' => [
-                        'label' => 'Рифмы к словам',
-                        'url' => Yii::$app->homeUrl,
-                        'title' => 'Рифмы к словам',
-                    ],
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]);
-                ?>
-            </div>
-
-            <!--        ///Правый блок рекламы-->
-
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                <?= $content ?>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <?php
-                echo \yii\widgets\Menu::widget([
-                    'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
-                    'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
-                    'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
-                    'options' => ['class' => 'nav'],
-                ]);
-                ?>
-            </div>
-        </div>
-    </div>
     <?= $this->render('@app/themes/default/layouts/block/headers/_footer.php'); ?>
     <?php $this->endBody() ?>
 </div>
