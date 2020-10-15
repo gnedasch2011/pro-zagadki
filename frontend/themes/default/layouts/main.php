@@ -41,32 +41,19 @@ AppAsset::register($this);
                     <aside>
                         <img src="img/baner2.png" alt="">
                         <div class="news_side">
-                            <h3><a href="#">Новости</a></h3>
-                            <div class="news_data">07.10.2020</div>
-                            <ul>
-                                <li><a href="#">Около 300 тысяч туристов посетили Египет за три
-                                        месяца</a></li>
-                                <li><a href="#">Российские авиакомпании получили допуск на полеты в
-                                        24 страны</a></li>
-                                <li><a href="#">В Ростуризме рассчитывают, что меры безопасности не
-                                        повлияют на программу кешбэка</a></li>
-                                <li><a href="#">Выставка под открытым небом «Людвиг ван Бетховен –
-                                        Ода «К радости»</a></li>
-                                <li><a href="#">Raffles Maldives Meradhoo представляет новую
-                                        королевскую резиденцию Royal Residence</a></li>
-                            </ul>
-                            <a href="#" class="all_news_link">Все новости</a>
+                            <h3><a href="#">Категории</a></h3>
+                        <?php
+                            echo \yii\widgets\Menu::widget([
+                                'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
+                                'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
+                                'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
+                                'options' => ['class' => 'nav'],
+                            ]);
+                            ?>
+                            <a href="#" class="all_news_link">Все категории</a>
                         </div>
                         <div class="baner_side"><img src="img/baner2.png" alt=""></div>
                     </aside>
-                    <?php
-                    echo \yii\widgets\Menu::widget([
-                        'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
-                        'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
-                        'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
-                        'options' => ['class' => 'nav'],
-                    ]);
-                    ?>
                 </div>
             </div>
         </div>
