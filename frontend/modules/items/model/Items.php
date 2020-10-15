@@ -70,4 +70,31 @@ class Items extends \yii\db\ActiveRecord
         return $detailUrl;
     }
 
+    public function getFullTitleName()
+    {
+        $str = $this->qustion;
+
+        if (substr_count($str, ' ') < 30) {
+
+            return $str;
+        }
+
+        $arrStr = explode(' ', $str);
+
+        $res = '';
+
+        foreach ($arrStr as $i => $item) {
+
+            if ($i > 20 && (strpos($item, ',') || strpos($item, '.'))) {
+                return $res . ' ' . $item;
+            }
+
+            $res .= $item . ' ';
+        }
+
+        return $res;
+
+
+    }
+
 }
