@@ -36,9 +36,7 @@ class DefaultController extends ControllerWithParam
 
     public function actionList($name_transliteration)
     {
-
         $category = Category::find()->where(['name_transliteration' => $name_transliteration])->one();
-
         $query = $category->getItems();
 
         $this->view->title = "Загадки про {$category->name} с ответами | 50 загадок на Pro-Zagadki.ru";
