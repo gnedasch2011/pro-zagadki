@@ -47,7 +47,7 @@ AppAsset::register($this);
                                 'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
                                 'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
                                 'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
-                                'options' => ['class' => 'nav'],
+                                'options' => ['class' => 'nav text-center'],
                             ]);
                             ?>
                             <a href="#" class="all_news_link">Все категории</a>
