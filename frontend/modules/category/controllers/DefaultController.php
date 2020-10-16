@@ -52,12 +52,14 @@ class DefaultController extends ControllerWithParam
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
-
+        $h1 = "Загадки на тему \"" . $category->name . "\"";
 
         return $this->render('list', [
             'models' => $models,
             'pages' => $pages,
             'category' => $category,
+            'h1' => $h1,
+
         ]);
     }
 
