@@ -29,8 +29,7 @@ AppAsset::register($this);
 </head>
 <body>
 <div class="wrapper">
-    <?php $this->beginBody() ?>
-    <?= $this->render('@app/themes/default/layouts/block/headers/_header.php'); ?>
+    <?= $this->render('@votpuskView/layouts/block/headers/_header.php'); ?>
     <section class="main_sec">
         <div class="container">
             <div class="row">
@@ -58,7 +57,7 @@ AppAsset::register($this);
             </div>
         </div>
     </section>
-    <?= $this->render('@app/themes/default/layouts/block/headers/_footer.php'); ?>
+    <?= $this->render('@votpuskView/layouts/block/headers/_header.php'); ?>
     <?php $this->endBody() ?>
 </div>
 </body>

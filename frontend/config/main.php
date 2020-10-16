@@ -63,12 +63,11 @@ return [
         'view' => [
 //            'class' => 'app\modules\common\components\View',
             'theme' => [
-                'basePath' => '@app/themes/default',
-                'baseUrl' => '@web/themes/default',
+                'basePath' => '@app/themes/votpusk',
+                'baseUrl' => '@web/themes/votpusk',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/default',
-                    '@app/modules' => '@app/themes/default/modules',
-
+                    '@app/views' => '@app/themes/votpusk',
+                    '@app/modules' => '@app/themes/votpusk/modules',
                 ]
             ]
         ],

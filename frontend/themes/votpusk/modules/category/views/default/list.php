@@ -7,7 +7,7 @@
     <?php
 
     foreach ($models as $model) {
-        echo $this->render('@app/themes/default/modules/items/views/default/_block/item/detailPuzzles', [
+        echo $this->render('@app/themes/votpusk/modules/items/views/default/_block/item/detailPuzzles', [
                 'model' => $model,
             ]
         );
