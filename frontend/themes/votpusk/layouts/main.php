@@ -38,7 +38,26 @@ use common\widgets\Alert;
                 </div>
                 <div class="col-md-3">
                     <aside>
-                        <img src="/themes/votupsk/web/img/baner2.png" alt="">
+                        <!-- Yandex.RTB R-A-653585-2 -->
+<div id="yandex_rtb_R-A-653585-2"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-653585-2",
+                renderTo: "yandex_rtb_R-A-653585-2",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
                         <div class="news_side">
                             <h3><a href="#">Категории</a></h3>
                             <?php
@@ -51,7 +70,26 @@ use common\widgets\Alert;
                             ?>
                             <a href="#" class="all_news_link">Все категории</a>
                         </div>
-                        <div class="baner_side"><img src="/themes/votupsk/web/img/baner2.png" alt="">
+                        <div class="baner_side"><!-- Yandex.RTB R-A-653585-2 -->
+<div id="yandex_rtb_R-A-653585-2"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-653585-2",
+                renderTo: "yandex_rtb_R-A-653585-2",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
                         </div>
                     </aside>
                 </div>
