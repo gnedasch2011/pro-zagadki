@@ -11,7 +11,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
-AppAsset::register($this);
+//AppAsset::register($this);
 \frontend\assets\VotpuskAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -57,7 +57,7 @@ AppAsset::register($this);
             </div>
         </div>
     </section>
-    <?= $this->render('@votpuskView/layouts/block/headers/_header.php'); ?>
+    <?= $this->render('@votpuskView/layouts/block/headers/_footer.php'); ?>
     <?php $this->endBody() ?>
 </div>
 </body>
