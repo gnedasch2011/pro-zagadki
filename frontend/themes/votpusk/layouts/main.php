@@ -12,7 +12,7 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 //AppAsset::register($this);
-\frontend\assets\VotpuskAsset::register($this);
+\frontend\themes\votpusk\VotpuskAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ use common\widgets\Alert;
                 </div>
                 <div class="col-md-3">
                     <aside>
-                        <img src="themes/votupsk/web/img/baner2.png" alt="">
+                        <img src="/themes/votupsk/web/img/baner2.png" alt="">
                         <div class="news_side">
                             <h3><a href="#">Категории</a></h3>
                             <?php
@@ -51,7 +51,7 @@ use common\widgets\Alert;
                             ?>
                             <a href="#" class="all_news_link">Все категории</a>
                         </div>
-                        <div class="baner_side"><img src="themes/votupsk/web/img/baner2.png" alt="">
+                        <div class="baner_side"><img src="/themes/votupsk/web/img/baner2.png" alt="">
                         </div>
                     </aside>
                 </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\assets;
+namespace frontend\themes\votpusk;
 
 use yii\web\AssetBundle;
 
