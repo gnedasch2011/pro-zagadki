@@ -569,3 +569,44 @@ transform: rotate(-90deg) translateY(-50%);
 	background-color: #fff;
 	margin: 0 auto;
 }
+
+.answer {
+	display: none;
+}
+
+.btn_otv {
+	padding: 1px 5px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 2px;
+	min-width: 50px;
+	text-align: center;
+	text-decoration: none;
+	/* display: table; */
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 6px;
+	padding: 2px 11px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 230ms ease-in 0s;
+	transition: all 230ms ease-in 0s;
+	color: #000;
+	background-color: #f5f6f8;
+	padding: 10px 13px;
+	margin: 20px auto;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.block-puzzles h4 {
+	padding: 10px 0;
+}
+
+.block-puzzles {
+	margin-bottom: 20px;
+	padding: 10px;
+	border-bottom: 1px solid #eaecf0;
+}

@@ -102,7 +102,7 @@ $SearchQuery = new SearchQuery();
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="baner_img"><img src="/img/baner1.webp" alt=""></div>
+                <div class="baner_img"><img src="themes/votupsk/web/img/baner1.webp" alt=""></div>
             </div>
         </div>
     </div>

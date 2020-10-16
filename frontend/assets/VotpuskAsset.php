@@ -15,9 +15,9 @@ class VotpuskAsset extends AssetBundle
         'themes/votupsk/web/libs/bootstrap/css/bootstrap-grid.min.css',
         'themes/votupsk/web/libs/owl/assets/owl.carousel.min.css',
         'themes/votupsk/web/css/fonts.css',
-        'themes/votupsk/web/css/main.css',
         'themes/votupsk/web/css/media.css',
-        'themes/votupsk/web/css/defaultTemplate.css',
+        'themes/votupsk/web/css/main.css',
+        'themes/votupsk/web/css/site.css',
     ];
 
     public $js = [
@@ -32,7 +32,4 @@ class VotpuskAsset extends AssetBundle
         'themes/votupsk/web/js/main.js',
     ];
 
-    public $depends = [
-        'frontend\assets\AppAsset',
-    ];
 }
