@@ -19,6 +19,7 @@ class DefaultController extends ControllerWithParam
             ['name' => 'description', 'content' => "Лучшие загадки с ответами для детей и взрослых! Более 100500 загадок на разные темы на Pro-Zagadki.ru"]
         );
 
+      
         $urlsCategorys = Category::find()
             ->asArray()
             ->all();

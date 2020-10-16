@@ -52,6 +52,11 @@ class DefaultController extends ControllerWithParam
             ->all();
         $h1 = "Загадки на тему \"" . $category->name . "\"";
 
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => $category->name,
+        );
+
+
         return $this->render('list', [
             'models' => $models,
             'pages' => $pages,

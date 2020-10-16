@@ -30,6 +30,15 @@ class DefaultController extends ControllerWithParam
     {
         $model = Items::findOne(['id' => $id]);
 
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => $model->category->name,
+            'url' => '/' . $model->category->getUrl(),
+        );
+
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => mb_substr($model->qustion, 0, 30) . '...',
+        );
+
         return $this->render('view', [
             'model' => $model,
         ]);

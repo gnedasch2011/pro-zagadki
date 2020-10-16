@@ -107,36 +107,29 @@ $SearchQuery = new SearchQuery();
         </div>
     </div>
 </section>
-<section class="breadcrumbs_sec">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="breadcrumbs_block">
-                    <span>Путеводитель:</span>
-                    <ul>
-                        <li><a href="#">Страны </a></li>
-                        /
-                        <li><a href="#">Достопримечательности</a></li>
-                        /
-                        <li><a href="#">Отели</a></li>
-                        /
-                        <li><a href="#">Отзывы об отелях</a></li>
-                        /
-                        <li><a href="#">Вопросы</a></li>
-                    </ul>
+<?php if(isset($this->params['breadcrumbs'])):?>
+    <section class="breadcrumbs_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumbs_block">
+                        <!--                    <span>Путеводитель:</span>-->
+                        <?php
+                        // $this is the view object currently being used
+                        echo Breadcrumbs::widget([
+                            'homeLink' => [
+                                'label' => 'Главная',
+                                'url' => Yii::$app->homeUrl,
+                                'title' => 'Главная',
+                            ],
+                            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                        ]);
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<?php
-// $this is the view object currently being used
-echo Breadcrumbs::widget([
-    'homeLink' => [
-        'label' => 'Рифмы к словам',
-        'url' => Yii::$app->homeUrl,
-        'title' => 'Рифмы к словам',
-    ],
-    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-]);
-?>
+    </section>
+
+<?php endif;?>
+
