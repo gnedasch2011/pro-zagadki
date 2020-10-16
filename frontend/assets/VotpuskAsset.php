@@ -32,4 +32,7 @@ class VotpuskAsset extends AssetBundle
         'themes/votupsk/web/js/main.js',
     ];
 
+    public $depends = [
+        'frontend\assets\AppAsset',
+    ];
 }
