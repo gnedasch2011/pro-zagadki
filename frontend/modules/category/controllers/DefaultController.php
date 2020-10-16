@@ -45,11 +45,16 @@ class DefaultController extends ControllerWithParam
         );
 
         $countQuery = clone $query;
-        $pages = new Pagination(['totalCount' => $countQuery->count()]);
+        $pages = new Pagination([
+            'totalCount' => $countQuery->count(),
+            'pageSize' => 80,
+
+        ]);
 
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
+        
         $h1 = "Загадки на тему \"" . $category->name . "\"";
 
         $this->view->params['breadcrumbs'][] = array(
