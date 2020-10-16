@@ -19,14 +19,29 @@ class DefaultController extends ControllerWithParam
             ['name' => 'description', 'content' => "Лучшие загадки с ответами для детей и взрослых! Более 100500 загадок на разные темы на Pro-Zagadki.ru"]
         );
 
-      
-        $urlsCategorys = Category::find()
-            ->asArray()
-            ->all();
 
+        $urlsCategorys = \Yii::$app->db->createCommand('SELECT c.* FROM puzzles.items_categorys ic
+right join category c on c.id = ic.category_id
+where category_id is not null
+group by c.name')->queryAll();
+            
+        $i = 0;
+        $res = [];
+
+        foreach ($urlsCategorys as $urlCategory) {
+            if ($i > 10) {
+                $letter = mb_substr($urlCategory['name'], 0, 1, 'utf-8');
+                $res[$letter][$urlCategory['name']]['name'] = $urlCategory['name'];
+                $res[$letter][$urlCategory['name']]['url'] = '/' . $urlCategory['name_transliteration'];
+            }
+
+            $i++;
+        }
+
+        ksort($res);
 
         return $this->render('MainPage', [
-            'urlsCategoryArr' => $urlsCategorys,
+            'urlsCategorysGroup' => $res,
         ]);
     }
 
