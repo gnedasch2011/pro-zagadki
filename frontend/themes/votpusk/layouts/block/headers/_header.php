@@ -14,7 +14,7 @@ $SearchQuery = new SearchQuery();
             <div class="row flex">
                 <div class="col-md-4">
                     <div class="top_left">
-                        <div class="logo"><a href="#"><img src="" alt=""></a>
+                        <div class="logo"><a href="#"><img src="/themes/votupsk/web/img/logo.svg" alt=""></a>
                         </div>
                         <span class="top_city"><?= $h1 ?? ''; ?></h1></span>
                     </div>

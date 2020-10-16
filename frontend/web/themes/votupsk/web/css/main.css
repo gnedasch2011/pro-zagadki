@@ -610,3 +610,6 @@ transform: rotate(-90deg) translateY(-50%);
 	padding: 10px;
 	border-bottom: 1px solid #eaecf0;
 }
+.breadcrumb{
+	margin-bottom: 0!important;
+}
