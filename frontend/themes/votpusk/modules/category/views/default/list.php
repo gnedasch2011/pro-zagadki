@@ -1,8 +1,5 @@
 <div class="main_text">
-    <h1>Test</h1>
-    <?php /*?>
     <h1><?= $h1 ?? ''; ?></h1>
-    <?php */?>
 </div>
 
 <div class="row">
