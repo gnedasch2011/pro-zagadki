@@ -76,7 +76,7 @@ class Items extends \yii\db\ActiveRecord
 
         if (substr_count($str, ' ') < 30) {
 
-            return $str;
+            return $this->clearTitle($str);
         }
 
         $arrStr = explode(' ', $str);
@@ -86,14 +86,22 @@ class Items extends \yii\db\ActiveRecord
         foreach ($arrStr as $i => $item) {
 
             if ($i > 20 && (strpos($item, ',') || strpos($item, '.'))) {
-                return $res . ' ' . $item;
+                return $this->clearTitle($res) . ' ' . $item;
             }
 
-            $res .= $item . ' ';
+            $res .= $this->clearTitle($item) . ' ';
         }
 
         return $res;
 
+
+    }
+
+    public function clearTitle($str)
+    {
+        $str = str_replace("<br />", '', $str);
+
+        return $str;
 
     }
 
