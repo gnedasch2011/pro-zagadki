@@ -102,7 +102,12 @@ use common\widgets\Alert;
 </body>
 </html>
 <?php $this->endPage() ?>
-
+<?php
+echo common\widgets\micromark\MicromarkWidget::widget([
+    'items' => $this->params['breadcrumbs'],
+    'template' => 'breadcrubs',
+]);
+?>
 <style>
 
     #my_nav {

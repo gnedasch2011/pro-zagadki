@@ -1,10 +1,13 @@
 <?php
 $mainBread = [
     [
-        'label' => 'Главная',
+        'label' => Yii::$app->params['mainBreadcrumbsName'],
         'url' => '/',
     ]
 ];
+if (!isset($items)) {
+    $items = [];
+}
 
 $itemsLtd = array_merge($mainBread, $items);
 

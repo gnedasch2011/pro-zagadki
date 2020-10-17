@@ -612,4 +612,5 @@ transform: rotate(-90deg) translateY(-50%);
 }
 .breadcrumb{
 	margin-bottom: 0!important;
+	 background-color: #eaecf0;
 }

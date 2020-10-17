@@ -14,7 +14,8 @@ $SearchQuery = new SearchQuery();
             <div class="row flex">
                 <div class="col-md-4">
                     <div class="top_left">
-                        <div class="logo"><a href="#"><img src="/themes/votupsk/web/img/logo.svg" alt=""></a>
+                        <div class="logo"><a href="#"><img src="/themes/votupsk/web/img/logo.svg"
+                                                           alt=""></a>
                         </div>
                         <span class="top_city"><?= $h1 ?? ''; ?></h1></span>
                     </div>
@@ -103,30 +104,31 @@ $SearchQuery = new SearchQuery();
         <div class="row">
             <div class="col-md-12">
                 <!-- Yandex.RTB R-A-653585-1 -->
-<div id="yandex_rtb_R-A-653585-1"></div>
-<script type="text/javascript">
-    (function(w, d, n, s, t) {
-        w[n] = w[n] || [];
-        w[n].push(function() {
-            Ya.Context.AdvManager.render({
-                blockId: "R-A-653585-1",
-                renderTo: "yandex_rtb_R-A-653585-1",
-                async: true
-            });
-        });
-        t = d.getElementsByTagName("script")[0];
-        s = d.createElement("script");
-        s.type = "text/javascript";
-        s.src = "//an.yandex.ru/system/context.js";
-        s.async = true;
-        t.parentNode.insertBefore(s, t);
-    })(this, this.document, "yandexContextAsyncCallbacks");
-</script></div>
-            
+                <div id="yandex_rtb_R-A-653585-1"></div>
+                <script type="text/javascript">
+                    (function (w, d, n, s, t) {
+                        w[n] = w[n] || [];
+                        w[n].push(function () {
+                            Ya.Context.AdvManager.render({
+                                blockId: "R-A-653585-1",
+                                renderTo: "yandex_rtb_R-A-653585-1",
+                                async: true
+                            });
+                        });
+                        t = d.getElementsByTagName("script")[0];
+                        s = d.createElement("script");
+                        s.type = "text/javascript";
+                        s.src = "//an.yandex.ru/system/context.js";
+                        s.async = true;
+                        t.parentNode.insertBefore(s, t);
+                    })(this, this.document, "yandexContextAsyncCallbacks");
+                </script>
+            </div>
+
         </div>
     </div>
 </section>
-<?php if(isset($this->params['breadcrumbs'])):?>
+<?php if (isset($this->params['breadcrumbs'])): ?>
     <section class="breadcrumbs_sec">
         <div class="container">
             <div class="row">
@@ -137,9 +139,9 @@ $SearchQuery = new SearchQuery();
                         // $this is the view object currently being used
                         echo Breadcrumbs::widget([
                             'homeLink' => [
-                                'label' => 'Главная',
+                                'label' => Yii::$app->params['mainBreadcrumbsName'],
                                 'url' => Yii::$app->homeUrl,
-                                'title' => 'Главная',
+                                'title' => Yii::$app->params['mainBreadcrumbsName'],
                             ],
                             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                         ]);
@@ -150,5 +152,5 @@ $SearchQuery = new SearchQuery();
         </div>
     </section>
 
-<?php endif;?>
+<?php endif; ?>
 
