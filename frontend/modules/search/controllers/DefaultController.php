@@ -22,7 +22,6 @@ class DefaultController extends Controller
 
             $searchWord = $SearchQuery->query;
 
-
             $items = Items::searchItems($searchWord);
 
             return $this->render('resultSearch', [

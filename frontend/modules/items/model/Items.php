@@ -116,7 +116,7 @@ class Items extends \yii\db\ActiveRecord
 
         for ($i = 0; $i < count($items); $i++) {
             $item = $items[$i];
-            $res[$i]['url'] =   $item->getDetailUrl();
+            $res[$i]['url'] = $item->getDetailUrl();
             $res[$i]['title'] = $item->getFullTitleName();
         }
 
