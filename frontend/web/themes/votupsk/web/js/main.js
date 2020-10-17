@@ -1,4 +1,4 @@
-$(document).on('click', '.openAnswer', function (e) {
+$(document).on('click', '.openAnswerJs', function (e) {
     e.preventDefault();
     console.log($(this));
     $(this).fadeOut();

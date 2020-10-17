@@ -123,4 +123,15 @@ class Items extends \yii\db\ActiveRecord
         return $res;
     }
 
+    public static function getRandomItems($count = 5)
+    {
+        $items = self::find()
+            ->orderBy('RAND()')
+            ->limit($count)
+            ->all();
+
+        return $items;
+    }
+
+
 }

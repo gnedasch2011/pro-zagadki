@@ -1,3 +1,25 @@
+GET http://pro-zagadki.loc/dikie-zhivotnye/11231
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T030745-1.200.html
+
+###
+
+GET http://pro-zagadki.loc/dikie-zhivotnye/11231
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T030745.200.html
+
+###
+
 GET http://pro-zagadki.loc/sitemap.xml
 Accept: */*
 Cache-Control: no-cache
@@ -523,26 +545,6 @@ Content-Type: application/x-www-form-urlencoded
 SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
 
 <> 2020-10-17T112151.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112131.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T111724.500.html
 
 ###
 

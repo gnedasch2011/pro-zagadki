@@ -47,7 +47,7 @@ class MenuHelper extends Model
 
             $mainInfo = [
                 'label' => $category->name,
-                'url' => '////' . $category->name,
+                'url' => '/' . $category->name_transliteration,
             ];
 
             $arrayForCatFull = array_merge($mainInfo, $arrayForCat);

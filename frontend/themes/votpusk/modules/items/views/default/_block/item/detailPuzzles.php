@@ -6,7 +6,7 @@
         <p><img width="100%" src="/images/items/<?= $model->img; ?>" alt=""></p>
     <?php endif; ?>
 
-    <a href="#" class="openAnswer btn btn-default btn-xs btn_otv">Показать ответ …</a>
+    <a href="#" class="openAnswerJs openAnswer btn btn-default btn-xs btn_otv">Показать ответ …</a>
     <div class="answer"><b>Ответ: </b> <?= $model->answer; ?>
         <?php /*?>
 
@@ -23,6 +23,4 @@
         <?php endif; ?>
    <?php */ ?>
     </div>
-
-
 </div>

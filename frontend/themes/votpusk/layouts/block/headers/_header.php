@@ -17,7 +17,7 @@ $SearchQuery = new SearchQuery();
                         <div class="logo"><a href="#"><img src="/themes/votupsk/web/img/logo.png"
                                                            alt=""></a>
                         </div>
-                        <span class="top_city"><?= $h1 ?? ''; ?></h1></span>
+                        <span class="top_city"><?= \Yii::$app->params['mainWord'] ?? ''; ?></h1></span>
                     </div>
                 </div>
                 <div class="col-md-8">
