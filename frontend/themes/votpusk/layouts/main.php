@@ -13,10 +13,11 @@ use common\widgets\Alert;
 
 //AppAsset::register($this);
 \frontend\themes\votpusk\VotpuskAsset::register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html>
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,9 +44,9 @@ use common\widgets\Alert;
                             <!-- Yandex.RTB R-A-653585-2 -->
                             <div id="yandex_rtb_R-A-653585-2"></div>
                             <script type="text/javascript">
-                                (function(w, d, n, s, t) {
+                                (function (w, d, n, s, t) {
                                     w[n] = w[n] || [];
-                                    w[n].push(function() {
+                                    w[n].push(function () {
                                         Ya.Context.AdvManager.render({
                                             blockId: "R-A-653585-2",
                                             renderTo: "yandex_rtb_R-A-653585-2",

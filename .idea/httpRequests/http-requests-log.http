@@ -1,3 +1,135 @@
+GET http://pro-zagadki.loc/sitemap.xml
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T023711.200.html
+
+###
+
+GET http://pro-zagadki.loc/sitemap.xml
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T023655-1.200.html
+
+###
+
+GET http://pro-zagadki.loc/sitemap.xml
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T023655.200.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T022209.200.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T022018.500.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T022012.200.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T022003.200.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T021830.500.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T015921-1.200.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T015921.200.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T115822.200.html
+
+###
+
+GET http://pro-zagadki.loc/osen
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-17T115815.200.html
+
+###
+
 POST http://pro-zagadki.loc/search/default/index
 Accept: */*
 Cache-Control: no-cache
@@ -411,108 +543,6 @@ Cache-Control: no-cache
 SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
 
 <> 2020-10-17T111724.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T111708.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T111707.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T111635.500.html
-
-###
-
-GET http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-17T111622-1.500.html
-
-###
-
-GET http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-17T111622.500.html
-
-###
-
-GET http://pro-zagadki.loc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-16T013549.200.html
-
-###
-
-GET http://pro-zagadki.loc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-16T013524.500.html
-
-###
-
-GET http://pro-zagadki.loc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-16T012844.200.html
-
-###
-
-GET http://pro-zagadki.loc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-16T012756.200.html
-
-###
-
-GET http://pro-zagadki.loc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-16T012656.200.html
-
-###
-
-GET http://pro-zagadki.loc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-16T012643.200.html
-
-###
-
-GET http://pro-zagadki.loc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-16T012618.200.html
 
 ###
 

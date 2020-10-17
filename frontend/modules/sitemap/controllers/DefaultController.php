@@ -47,7 +47,6 @@ class DefaultController extends Controller
 
     public function actionSitemap($index)
     {
-
         $arrUrls = SitemapUrlHelper::getAllUrls();
         $limit = SitemapUrlHelper::LIMIT_CONST;
 

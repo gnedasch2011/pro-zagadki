@@ -2,7 +2,10 @@
     <h1><?= $h1 ?? ''; ?></h1>
 </div>
 
+
+
 <div class="row">
+
 
     <?php
 
@@ -14,6 +17,7 @@
     }
 
     ?>
+
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <?php
         echo \yii\widgets\LinkPager::widget([

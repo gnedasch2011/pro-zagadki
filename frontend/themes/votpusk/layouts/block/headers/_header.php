@@ -46,7 +46,7 @@ $SearchQuery = new SearchQuery();
                                 <button class="btn_search">Найти</button>
                             </form>
    <?php */ ?>
-                        <div class="top_user">
+                        <div class="top_user" hidden>
                             <button class="user_icon"></button>
                         </div>
                         <button class="toggle_btn"></button>

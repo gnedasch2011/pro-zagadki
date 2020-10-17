@@ -16,7 +16,7 @@ use yii\base\Model;
 class SitemapUrlHelper extends Model
 {
 
-    const LIMIT_CONST = 50000;
+    const LIMIT_CONST = 5000;
 
 
     public static function getAllUrls()

@@ -84,12 +84,13 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'sitemap.xml' => 'sitemap/default',
+                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
                 '' => 'site/default/main-page',
                 '<name_transliteration:[\w-]+>/<id:\d+>' => 'items/default/detail',
                 '<name_transliteration:[\w-]+>' => 'category/default/list',
 
-                'sitemap.xml' => 'sitemap/default',
-                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
+
 
 //                'names' => 'rhyme/page-with-name',
 

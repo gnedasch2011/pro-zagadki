@@ -726,7 +726,26 @@ footer {
 .help-block {
     display: none;
 }
-.search_block_item{
+
+.search_block_item {
     margin: 10px 0;
     border-bottom: 2px solid #ddd;
+}
+
+.page-nav {
+    font-size: 17px;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+.page-nav-item {
+    transition: ease-in-out 150ms;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ebf4fd;
+    float: left;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: #000;
 }

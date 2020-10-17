@@ -31,4 +31,16 @@ class Category extends CategoryBase
     {
         return $this->name_transliteration;
     }
+
+
+    //надо получить все связанные категории у элемента внутри этой категории
+
+    public function getAllCategoryInItems()
+    {
+        echo "<pre>";
+        print_r($this->items);
+        die();
+    }
+
+
 }
