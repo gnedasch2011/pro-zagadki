@@ -102,7 +102,25 @@ class Items extends \yii\db\ActiveRecord
         $str = str_replace("<br />", '', $str);
 
         return $str;
+    }
 
+    public static function searchItems($query)
+    {
+        $items = self::find()
+            ->where(['like', 'answer', '%' . $query . '%', false])
+            ->orWhere(['like', 'qustion', '%' . $query . '%', false])
+            ->limit(40)
+            ->all();
+
+        $res = [];
+
+        for ($i = 0; $i < count($items); $i++) {
+            $item = $items[$i];
+            $res[$i]['url'] =   $item->getDetailUrl();
+            $res[$i]['title'] = $item->getFullTitleName();
+        }
+
+        return $res;
     }
 
 }

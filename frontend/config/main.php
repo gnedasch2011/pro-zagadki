@@ -35,6 +35,10 @@ return [
         'sitemap' => [
             'class' => 'frontend\modules\sitemap\Module',
         ],
+
+        'search' => [
+            'class' => 'frontend\modules\search\Module',
+        ],
     ],
     'components' => [
         'request' => [

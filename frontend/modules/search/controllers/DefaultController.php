@@ -8,6 +8,7 @@
 
 namespace frontend\modules\search\controllers;
 
+use frontend\modules\items\model\Items;
 use frontend\modules\search\form\SearchQuery;
 use yii\web\Controller;
 
@@ -21,13 +22,19 @@ class DefaultController extends Controller
 
             $searchWord = $SearchQuery->query;
 
-            if ($searchWord) {
-                return $this->redirect('/' . \Yii::$app->params['mainControllers'] . '/' . $searchWord);
-            }
+
+            $items = Items::searchItems($searchWord);
+
+            return $this->render('resultSearch', [
+                'items' => $items ?? [],
+                'searchWord' => $searchWord,
+            ]);
 
         }
 
-        echo 'tet';
-
+        return $this->render('resultSearch', [
+            'items' => $items ?? [],
+            'searchWord' => $searchWord,
+        ]);
     }
 }

@@ -14,19 +14,38 @@ $SearchQuery = new SearchQuery();
             <div class="row flex">
                 <div class="col-md-4">
                     <div class="top_left">
-                        <div class="logo"><a href="#"><img src="/themes/votupsk/web/img/logo.png" alt=""></a>
+                        <div class="logo"><a href="#"><img src="/themes/votupsk/web/img/logo.png"
+                                                           alt=""></a>
                         </div>
                         <span class="top_city"><?= $h1 ?? ''; ?></h1></span>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="top_right">
-                        <div class="">
+                        <?php
+                        $form = ActiveForm::begin([
+                            'id' => 'login-form',
+                            'options' => ['class' => 'search_block'],
+                            'action' => '/search/default/index',
+                        ]) ?>
+                        <?= $form->field($SearchQuery, 'query', [
+                            'options' => [
+                                'class' => 'search',
+                            ],
+                        ])->textInput(['placeholder' => 'Поиск по сайту'])->label(false) ?>
+                        <?= Html::submitButton('Найти', [
+                            'class' => 'btn_search',
+                            'placeholder' => 'Поиск по сайту',
+                        ]) ?>
+
+                        <?php ActiveForm::end() ?>
+                        <?php /*?>
+
                             <form class="search_block" action="/search/index">
                                 <input type="search" placeholder="Поиск по сайту">
                                 <button class="btn_search">Найти</button>
                             </form>
-                        </div>
+   <?php */ ?>
                         <div class="top_user">
                             <button class="user_icon"></button>
                         </div>
@@ -103,26 +122,27 @@ $SearchQuery = new SearchQuery();
         <div class="row">
             <div class="col-md-12">
                 <!-- Yandex.RTB R-A-653585-1 -->
-<div id="yandex_rtb_R-A-653585-1"></div>
-<script type="text/javascript">
-    (function(w, d, n, s, t) {
-        w[n] = w[n] || [];
-        w[n].push(function() {
-            Ya.Context.AdvManager.render({
-                blockId: "R-A-653585-1",
-                renderTo: "yandex_rtb_R-A-653585-1",
-                async: true
-            });
-        });
-        t = d.getElementsByTagName("script")[0];
-        s = d.createElement("script");
-        s.type = "text/javascript";
-        s.src = "//an.yandex.ru/system/context.js";
-        s.async = true;
-        t.parentNode.insertBefore(s, t);
-    })(this, this.document, "yandexContextAsyncCallbacks");
-</script></div>
-            
+                <div id="yandex_rtb_R-A-653585-1"></div>
+                <script type="text/javascript">
+                    (function (w, d, n, s, t) {
+                        w[n] = w[n] || [];
+                        w[n].push(function () {
+                            Ya.Context.AdvManager.render({
+                                blockId: "R-A-653585-1",
+                                renderTo: "yandex_rtb_R-A-653585-1",
+                                async: true
+                            });
+                        });
+                        t = d.getElementsByTagName("script")[0];
+                        s = d.createElement("script");
+                        s.type = "text/javascript";
+                        s.src = "//an.yandex.ru/system/context.js";
+                        s.async = true;
+                        t.parentNode.insertBefore(s, t);
+                    })(this, this.document, "yandexContextAsyncCallbacks");
+                </script>
+            </div>
+
         </div>
     </div>
 </section>
@@ -150,5 +170,5 @@ $SearchQuery = new SearchQuery();
         </div>
     </section>
 
-<?php endif;?>
+<?php endif; ?>
 
