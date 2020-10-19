@@ -1,6 +1,6 @@
 $(document).on('click', '.openAnswerJs', function (e) {
     e.preventDefault();
-    console.log($(this));
-    $(this).fadeOut();
-    $(this).next().fadeIn();
+
+    $(this).fadeOut(0);
+    $(this).next().css({"display": "block"});
 })

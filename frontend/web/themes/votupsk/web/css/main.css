@@ -679,6 +679,7 @@ footer {
 
 .answer {
     display: none;
+    padding: 20px 0;
 }
 
 .btn_otv {

@@ -7,8 +7,10 @@
     <?php endif; ?>
 
     <a href="#" class="openAnswerJs openAnswer btn btn-default btn-xs btn_otv">Показать ответ …</a>
-    <div class="answer"><b>Ответ: </b> <?= $model->answer; ?>
-        <?php /*?>
+    <b class="answer"><?= $model->answer; ?></b>
+
+
+    <?php /*?>
 
 
         <?php if (isset($model->categories)): ?>
