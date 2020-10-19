@@ -9,20 +9,4 @@
     <a href="#" class="openAnswerJs openAnswer btn btn-default btn-xs btn_otv">Показать ответ …</a>
     <b class="answer"><?= $model->answer; ?></b>
 
-
-    <?php /*?>
-
-
-        <?php if (isset($model->categories)): ?>
-            <div class="cont_tags">
-                <?php foreach ($model->categories as $category): ?>
-
-                    <a class="" href="/<?= $category->url; ?>"><span
-                                class="glyphicon glyphicon-tag"></span> <?= $category->name; ?></a>
-
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
-   <?php */ ?>
-    </div>
 </div>
