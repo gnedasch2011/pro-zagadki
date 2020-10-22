@@ -693,7 +693,7 @@ footer {
     /* display: table; */
     cursor: pointer;
     font-size: 12px;
-    line-height: 6px;
+    line-height: 4em;
     padding: 2px 11px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -739,6 +739,7 @@ footer {
     margin-top: 10px;
 
 }
+
 .page-nav-item {
     transition: ease-in-out 150ms;
     border-radius: 4px;
