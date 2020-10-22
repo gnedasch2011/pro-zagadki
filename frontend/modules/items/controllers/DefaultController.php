@@ -35,8 +35,14 @@ class DefaultController extends ControllerWithParam
             'url' => '/' . $model->category->getUrl(),
         );
 
+        $this->view->title = $model->getFullTitleName() . "| Про-Загадки.РУ";
+        $this->view->registerMetaTag(
+            ['name' => 'description', 'content' => $model->getFullTitleName() . "| Про-Загадки.РУ"]
+        );
+
+
         $this->view->params['breadcrumbs'][] = array(
-            'label' => mb_substr($model->qustion, 0, 30) . '...',
+            'label' => mb_substr($model->clearTitle($model->qustion), 0, 30) . '...',
         );
 
         return $this->render('view', [

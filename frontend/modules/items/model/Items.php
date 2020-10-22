@@ -100,6 +100,7 @@ class Items extends \yii\db\ActiveRecord
     public function clearTitle($str)
     {
         $str = str_replace("<br />", '', $str);
+        $str = str_replace("<br>", '', $str);
 
         return $str;
     }
