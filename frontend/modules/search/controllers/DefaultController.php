@@ -17,9 +17,9 @@ class DefaultController extends Controller
     public function actionIndex()
     {
         $SearchQuery = new SearchQuery();
-
+        echo "<pre>"; print_r($_POST);die();
         if ($SearchQuery->load(\Yii::$app->request->post()) && $SearchQuery->validate()) {
-
+                echo "<pre>"; print_r($SearchQuery);die();
             $searchWord = $SearchQuery->query;
 
             $items = Items::searchItems($searchWord);
