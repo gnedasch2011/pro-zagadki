@@ -9,10 +9,10 @@ $SearchQuery = new SearchQuery();
 
 ?>
 <header>
-    <div class="top_line">
+    <div class="top_line_back">
         <div class="container">
             <div class="row flex">
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-12">
                     <div class="top_left">
                         <div class="logo"><a href="/"><img src="/themes/votupsk/web/img/logo.png"
                                                            alt=""></a>
@@ -20,7 +20,7 @@ $SearchQuery = new SearchQuery();
                         <span class="top_city"><?= \Yii::$app->params['mainWord'] ?? ''; ?></h1></span>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 col-xs-12">
                     <div class="top_right">
                         <?php
                         $form = ActiveForm::begin([
@@ -142,7 +142,6 @@ $SearchQuery = new SearchQuery();
                     })(this, this.document, "yandexContextAsyncCallbacks");
                 </script>
             </div>
-
         </div>
     </div>
 </section>

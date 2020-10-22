@@ -16,6 +16,7 @@ use common\widgets\Alert;
 
 ?>
 <?php $this->beginPage() ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,6 +111,9 @@ use common\widgets\Alert;
 </div>
 </body>
 </html>
+
+
+
 <?php $this->endPage() ?>
 <?php
 echo common\widgets\micromark\MicromarkWidget::widget([
