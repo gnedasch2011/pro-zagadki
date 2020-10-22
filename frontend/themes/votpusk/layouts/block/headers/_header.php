@@ -5,48 +5,32 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 
+
 $SearchQuery = new SearchQuery();
 
 ?>
 <header>
-    <div class="top_line_back">
+    <div class="top_line">
         <div class="container">
             <div class="row flex">
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4">
                     <div class="top_left">
-                        <div class="logo"><a href="/"><img src="/themes/votupsk/web/img/logo.png"
-                                                           alt=""></a>
-                        </div>
-                        <span class="top_city"><?= \Yii::$app->params['mainWord'] ?? ''; ?></h1></span>
+                        <div class="logo"><a href="#"><img src="/themes/votupsk/web/img/logo.png"
+                                                           alt=""></a></div>
+                        <span class="top_city"><?= Yii::$app->params['mainBreadcrumbsName']; ?></span>
                     </div>
                 </div>
-                <div class="col-md-8 col-xs-12">
+                <div class="col-md-8">
                     <div class="top_right">
-                        <?php
-                        $form = ActiveForm::begin([
-                            'id' => 'login-form',
-                            'options' => ['class' => 'search_block'],
-                            'action' => '/search/default/index',
-                        ]) ?>
-                        <?= $form->field($SearchQuery, 'query', [
-                            'options' => [
-                                'class' => 'search',
-                            ],
-                        ])->textInput(['placeholder' => 'Поиск по сайту'])->label(false) ?>
-                        <?= Html::submitButton('Найти', [
-                            'class' => 'btn_search',
-                            'placeholder' => 'Поиск по сайту',
-                        ]) ?>
 
-                        <?php ActiveForm::end() ?>
-                        <?php /*?>
-
-                            <form class="search_block" action="/search/index">
+                        <form action="/search/default/index" method="post">
+                            <div class="search_block">
                                 <input type="search" placeholder="Поиск по сайту">
-                                <button class="btn_search">Найти</button>
-                            </form>
-   <?php */ ?>
-                        <div class="top_user" hidden>
+                                <button type="submit" class="btn_search">Найти</button>
+                            </div>
+                        </form>
+
+                        <div class="top_user">
                             <button class="user_icon"></button>
                         </div>
                         <button class="toggle_btn"></button>
@@ -58,6 +42,8 @@ $SearchQuery = new SearchQuery();
 
     <div class="top_mnu">
         <div class="container">
+            <?php /*?>
+
             <div class="row">
                 <div class="col-md-12 flex">
                     <div class="top_mnu_item">
@@ -113,6 +99,7 @@ $SearchQuery = new SearchQuery();
 
                 </div>
             </div>
+   <?php */ ?>
             <div class="main-menu-top-l"></div>
         </div>
     </div>
