@@ -14,6 +14,45 @@ class DefaultController extends ControllerWithParam
     public function actionMainPage()
     {
 
+//        $res = \Yii::$app->db->createCommand('SELECT * FROM puzzles.items')
+//            ->bindValues([
+//                ]
+//            )
+//            ->queryAll();
+//
+//        foreach ($res as $item) {
+//            $findDoubles = \Yii::$app->db->createCommand('SELECT * FROM puzzles.items where qustion = :qustion AND id !=:id')
+//                ->bindValues([
+//                        ':qustion' => $item['qustion'],
+//                        ':id' => $item['id'],
+//                    ]
+//                )
+//                ->queryAll();
+//
+//
+//            if ($findDoubles) {
+//                $items_categorys_ids = [];
+//
+//                foreach ($findDoubles as $findDouble) {
+//
+//                    Yii::$app->db->createCommand()->delete('items', ['id' => $findDouble['id']])->execute();
+//                    $items_categorys_ids[] = $findDouble['id'];
+//                }
+//
+//                //удаляем из items_categorys
+//                foreach ($items_categorys_ids as $item_category) {
+//                           Yii::$app->db->createCommand()->delete('items_categorys', ['id'=>$item_category])->execute();
+//
+//                }
+//            }
+//
+//        }
+//
+//        echo "<pre>";
+//        print_r($res);
+//        die();
+
+
         $this->view->title = "Загадки с ответами | 15000 загадок на Pro-Zagadki.ru";
         $this->view->registerMetaTag(
             ['name' => 'description', 'content' => "Лучшие загадки с ответами для детей и взрослых! Более 15000 загадок на разные темы на Pro-Zagadki.ru"]
@@ -24,7 +63,7 @@ class DefaultController extends ControllerWithParam
 right join category c on c.id = ic.category_id
 where category_id is not null
 group by c.name')->queryAll();
-            
+
         $i = 0;
         $res = [];
 

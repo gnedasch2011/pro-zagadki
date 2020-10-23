@@ -40,6 +40,41 @@ use common\widgets\Alert;
                 </div>
                 <div class="col-md-3">
                     <aside>
+                        <div>
+                            <!-- Yandex.RTB R-A-653585-3 -->
+                            <div id="yandex_rtb_R-A-653585-3"></div>
+                            <script type="text/javascript">
+                                (function(w, d, n, s, t) {
+                                    w[n] = w[n] || [];
+                                    w[n].push(function() {
+                                        Ya.Context.AdvManager.render({
+                                            blockId: "R-A-653585-3",
+                                            renderTo: "yandex_rtb_R-A-653585-3",
+                                            async: true
+                                        });
+                                    });
+                                    t = d.getElementsByTagName("script")[0];
+                                    s = d.createElement("script");
+                                    s.type = "text/javascript";
+                                    s.src = "//an.yandex.ru/system/context.js";
+                                    s.async = true;
+                                    t.parentNode.insertBefore(s, t);
+                                })(this, this.document, "yandexContextAsyncCallbacks");
+                            </script>
+                        </div>
+
+                        <div class="news_side">
+                            <h3><a href="#">Категории</a></h3>
+                            <?php
+                            echo \yii\widgets\Menu::widget([
+                                'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
+                                'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
+                                'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
+                                'options' => ['class' => 'nav text-center'],
+                            ]);
+                            ?>
+                            <a href="#" class="all_news_link">Все категории</a>
+                        </div>
                         <!-- Yandex.RTB R-A-653585-1 -->
                         <div class="baner_side"><!-- Yandex.RTB R-A-653585-2 -->
                             <!-- Yandex.RTB R-A-653585-2 -->
@@ -88,19 +123,6 @@ use common\widgets\Alert;
                         </div>
     <?php */ ?>
                         </div>
-                        <div class="news_side">
-                            <h3><a href="#">Категории</a></h3>
-                            <?php
-                            echo \yii\widgets\Menu::widget([
-                                'items' => \frontend\modules\menu\model\MenuHelper::getItemsForMenu(),
-                                'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
-                                'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
-                                'options' => ['class' => 'nav text-center'],
-                            ]);
-                            ?>
-                            <a href="#" class="all_news_link">Все категории</a>
-                        </div>
-
                     </aside>
 
                 </div>
@@ -111,7 +133,6 @@ use common\widgets\Alert;
 </div>
 </body>
 </html>
-
 
 
 <?php $this->endPage() ?>

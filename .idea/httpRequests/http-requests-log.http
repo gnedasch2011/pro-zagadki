@@ -1,3 +1,113 @@
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T051837.200.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T050746.200.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T050354.200.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T050341.200.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T050340.200.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T050140.500.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T045352.200.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T044612.200.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T044604.500.html
+
+###
+
+GET http://pro-zagadki.loc/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+SearchQuery%5Bquery%5D=мам
+
+<> 2020-10-22T044537.200.html
+
+###
+
 GET http://pro-zagadki.loc/dikie-zhivotnye/11231
 Accept: */*
 Cache-Control: no-cache
@@ -435,116 +545,6 @@ Content-Type: application/x-www-form-urlencoded
 SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
 
 <> 2020-10-17T113511.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/default/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112633.200.html
-
-###
-
-POST http://pro-zagadki.loc/search/default/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112606.200.html
-
-###
-
-POST http://pro-zagadki.loc/search/default/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112551-1.200.html
-
-###
-
-POST http://pro-zagadki.loc/search/default/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112551.200.html
-
-###
-
-POST http://pro-zagadki.loc/search/default/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112501.200.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112430.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112335.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112159.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112152.500.html
-
-###
-
-POST http://pro-zagadki.loc/search/index
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-SearchQuery%5Bquery%5D=%D0%B5%D1%83%D0%B5%D1%8B%D0%B5%5C
-
-<> 2020-10-17T112151.500.html
 
 ###
 
