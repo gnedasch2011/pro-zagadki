@@ -25,7 +25,7 @@ $SearchQuery = new SearchQuery();
 
                         <form action="/search/default/index" method="post">
                             <div class="search_block">
-                                <input type="search" placeholder="Поиск по сайту">
+                                <input type="search" name="SearchQuery[query]" placeholder="Поиск по сайту">
                                 <button type="submit" class="btn_search">Найти</button>
                             </div>
                         </form>

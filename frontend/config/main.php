@@ -89,8 +89,7 @@ return [
                 '' => 'site/default/main-page',
                 '<name_transliteration:[\w-]+>/<id:\d+>' => 'items/default/detail',
                 '<name_transliteration:[\w-]+>' => 'category/default/list',
-
-
+                'search/default/index' => 'search/default/index',
 
 //                'names' => 'rhyme/page-with-name',
 
