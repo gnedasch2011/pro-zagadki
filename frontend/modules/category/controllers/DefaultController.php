@@ -55,8 +55,8 @@ class DefaultController extends ControllerWithParam
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
-
-        $h1 = "Загадки на тему \"" . $category->name . "\"";
+          
+        $h1 = $category->h1;
 
         $this->view->params['breadcrumbs'][] = array(
             'label' => $category->name,
