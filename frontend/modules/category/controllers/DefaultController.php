@@ -39,10 +39,17 @@ class DefaultController extends ControllerWithParam
         $category = Category::find()->where(['name_transliteration' => $name_transliteration])->one();
         $query = $category->getItems();
         $count = $query->count();
-        $this->view->title = "Загадки про {$category->name} с ответами | {$count} загадок на Pro-Zagadki.ru";
+        $h1 = $category->h1;
+
+        /*
+       title:
+       description:
+          */
+
+        $this->view->title = "{$category->h1} с ответами | {$count} загадок на Pro-Zagadki.ru";
 
         $this->view->registerMetaTag(
-            ['name' => 'description', 'content' => "Загадки про {$category->name}. Подборка из {$count} загадок с ответами для детей и взрослых на Pro-Zagadki.ru"]
+            ['name' => 'description', 'content' => "{$category->h1} | Подборка из {$count} загадок с ответами для детей и взрослых на Pro-Zagadki.ru"]
         );
 
         $countQuery = clone $query;
@@ -55,8 +62,7 @@ class DefaultController extends ControllerWithParam
         $models = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
-          
-        $h1 = $category->h1;
+
 
         $this->view->params['breadcrumbs'][] = array(
             'label' => $category->name,
